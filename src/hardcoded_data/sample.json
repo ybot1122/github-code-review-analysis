@@ -1,0 +1,219 @@
+[
+    {
+      "title": "Pull Request 1",
+      "url": "https://github.com",
+      "number": 11944,
+      "createdAt": "2023-01-31T18:29:03Z",
+      "mergedAt": "2023-01-31T20:11:56Z",
+      "additions": 2,
+      "deletions": 2,
+      "baseRefName": "main",
+      "author": {
+        "login": "author1"
+      },
+      "timelineItems": [
+        {
+          "__typename": "PullRequestReview",
+          "state": "APPROVED",
+          "submittedAt": "2023-01-31T18:36:32Z",
+          "bodyText": "",
+          "author": {
+            "login": "author2"
+          }
+        },
+        {
+          "__typename": "PullRequestReview",
+          "state": "APPROVED",
+          "submittedAt": "2023-01-31T18:38:58Z",
+          "bodyText": "",
+          "author": {
+            "login": "author3"
+          }
+        },
+        {
+          "__typename": "IssueComment",
+          "createdAt": "2023-01-31T18:39:05Z",
+          "bodyText": "When you're ready to merge, add the \"Merge Queue\" label to your PR.  Mergify will add your PR to the queue,\nrebase your branch, confirm CI passes, and merge your branch in automatically.  For more info, visit https://docs.mergify.io/actions/queue/",
+          "author": {
+            "login": "mergify"
+          }
+        },
+        {
+          "__typename": "PullRequestReview",
+          "state": "APPROVED",
+          "submittedAt": "2023-01-31T18:47:23Z",
+          "bodyText": "",
+          "author": {
+            "login": "author4"
+          }
+        },
+        {
+          "__typename": "PullRequestReview",
+          "state": "APPROVED",
+          "submittedAt": "2023-01-31T18:52:31Z",
+          "bodyText": "",
+          "author": {
+            "login": "author5"
+          }
+        },
+        {
+          "__typename": "UnlabeledEvent",
+          "createdAt": "2023-01-31T19:28:08Z",
+          "label": {
+            "description": "",
+            "name": "Awaiting Dev Approval"
+          }
+        },
+        {
+          "__typename": "UnlabeledEvent",
+          "createdAt": "2023-01-31T19:30:29Z",
+          "label": {
+            "description": "",
+            "name": "Awaiting QA Approval"
+          }
+        },
+        {
+          "__typename": "UnlabeledEvent",
+          "createdAt": "2023-01-31T20:12:09Z",
+          "label": {
+            "description": "Add to Mergify.io queue",
+            "name": "Merge Queue"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Another Pull Request",
+      "url": "https://github.com",
+      "number": 11942,
+      "createdAt": "2023-01-31T18:15:28Z",
+      "mergedAt": "2023-01-31T20:29:41Z",
+      "additions": 3,
+      "deletions": 2,
+      "baseRefName": "main",
+      "author": {
+        "login": "author6"
+      },
+      "timelineItems": [
+        {
+          "__typename": "PullRequestReview",
+          "state": "APPROVED",
+          "submittedAt": "2023-01-31T18:17:04Z",
+          "bodyText": "",
+          "author": {
+            "login": "author1"
+          }
+        },
+        {
+          "__typename": "PullRequestReview",
+          "state": "COMMENTED",
+          "submittedAt": "2023-01-31T18:19:54Z",
+          "bodyText": "",
+          "author": {
+            "login": "author2"
+          }
+        },
+        {
+          "__typename": "PullRequestReview",
+          "state": "APPROVED",
+          "submittedAt": "2023-01-31T18:28:06Z",
+          "bodyText": "",
+          "author": {
+            "login": "author2"
+          }
+        },
+        {
+          "__typename": "IssueComment",
+          "createdAt": "2023-01-31T18:28:11Z",
+          "bodyText": "When you're ready to merge, add the \"Merge Queue\" label to your PR.  Mergify will add your PR to the queue,\nrebase your branch, confirm CI passes, and merge your branch in automatically.  For more info, visit https://docs.mergify.io/actions/queue/",
+          "author": {
+            "login": "mergify"
+          }
+        },
+        {
+          "__typename": "PullRequestReview",
+          "state": "APPROVED",
+          "submittedAt": "2023-01-31T18:31:47Z",
+          "bodyText": "",
+          "author": {
+            "login": "author3"
+          }
+        },
+        {
+          "__typename": "UnlabeledEvent",
+          "createdAt": "2023-01-31T18:32:23Z",
+          "label": {
+            "description": "Add to Mergify.io queue",
+            "name": "Merge Queue"
+          }
+        },
+        {
+          "__typename": "PullRequestReview",
+          "state": "APPROVED",
+          "submittedAt": "2023-01-31T18:37:49Z",
+          "bodyText": "Looks good",
+          "author": {
+            "login": "author4"
+          }
+        },
+        {
+          "__typename": "PullRequestReview",
+          "state": "APPROVED",
+          "submittedAt": "2023-01-31T18:40:21Z",
+          "bodyText": "Confirmed locally, this fixes the issue.",
+          "author": {
+            "login": "author10"
+          }
+        },
+        {
+          "__typename": "UnlabeledEvent",
+          "createdAt": "2023-01-31T20:29:59Z",
+          "label": {
+            "description": "Add to Mergify.io queue",
+            "name": "Merge Queue"
+          }
+        }
+      ]
+    },
+    {
+      "title": "A Pull Request that Fixes Something",
+      "url": "https://github.com",
+      "number": 11940,
+      "createdAt": "2023-01-31T17:59:54Z",
+      "mergedAt": "2023-01-31T18:42:28Z",
+      "additions": 4152,
+      "deletions": 160,
+      "baseRefName": "main",
+      "author": {
+        "login": "author11"
+      },
+      "timelineItems": [
+        {
+          "__typename": "PullRequestReview",
+          "state": "APPROVED",
+          "submittedAt": "2023-01-31T18:02:10Z",
+          "bodyText": "",
+          "author": {
+            "login": "author3"
+          }
+        },
+        {
+          "__typename": "PullRequestReview",
+          "state": "APPROVED",
+          "submittedAt": "2023-01-31T18:02:44Z",
+          "bodyText": "",
+          "author": {
+            "login": "author4"
+          }
+        },
+        {
+            "__typename": "IssueComment",
+            "createdAt": "2023-01-31T18:57:43Z",
+            "bodyText": "I think I see something interesting.",
+            "author": {
+              "login": "author5"
+            }
+          }
+          ]
+    }
+]  

@@ -1,0 +1,37 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.rawJson {
+  width: 33%;
+  background: green;
+  word-wrap: break-word;
+  overflow-x: scroll;
+}
+
+.prettyData {
+  width: 67%;
+  background: yellow;
+}
+
+textarea {
+  width: 200px;
+  height: 300px;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 32px;
+}
+
+button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+td {
+  padding: 5px;
+}
