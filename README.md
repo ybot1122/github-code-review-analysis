@@ -3,7 +3,7 @@
 You will need to add a `personalAccessToken.ts` to `src/` directory. This will allow you to make authenticated calls to GithHub GraphQL API:
 
 ```jsx
-const personalAccessToken = <personal access token here>;
+const personalAccessToken = "<personal access token here>";
 export default personalAccessToken;
 ```
 
