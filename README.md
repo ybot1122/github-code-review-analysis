@@ -11,14 +11,12 @@ You will also need to add a `repo.ts` to `src/` directory. This will allow to sp
 
 ```jsx
 const repo = {
-    "hostname": "https://github.com/api/graphql",
-    "owner": "github",
-    "name": "reponame"
-}
+  hostname: "https://github.com/api/graphql",
+  owner: "github",
+  name: "reponame",
+};
 
-export {
-    repo,
-}
+export { repo };
 ```
 
 ## Available Scripts

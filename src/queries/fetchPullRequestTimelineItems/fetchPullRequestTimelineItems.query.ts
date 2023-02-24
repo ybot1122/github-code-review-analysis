@@ -1,12 +1,12 @@
 // https://studio.apollographql.com/public/github/schema/reference/unions/PullRequestTimelineItem?query=timeline&variant=current
 // https://studio.apollographql.com/public/github/schema/reference/unions/PullRequestTimelineItems?query=returnType%3Areadyforreviewevent&variant=current
 
-import {repo} from '../../repo';
+import { repo } from "../../repo";
 
 const build = (after: string, prNumber: string) => {
-    const afterSearch = (after) ? ` after: \"${after}\", ` : ' ';
+  const afterSearch = after ? ` after: \"${after}\", ` : " ";
 
-    return `query {
+  return `query {
         repository(owner: "${repo.owner}", name: "${repo.name}") {
             pullRequest(number: ${prNumber}) {
                 number
@@ -48,9 +48,7 @@ const build = (after: string, prNumber: string) => {
                 }
             }
         }
-    }`
+    }`;
 };
 
-export {
-    build
-}
+export { build };

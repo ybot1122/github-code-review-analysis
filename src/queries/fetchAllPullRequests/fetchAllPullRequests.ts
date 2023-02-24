@@ -1,38 +1,34 @@
-import personalAccessToken from "../../personalAccessToken"
-import {build} from './fetchAllPullRequests.query'
-import {repo} from '../../repo';
+import personalAccessToken from "../../personalAccessToken";
+import { build } from "./fetchAllPullRequests.query";
+import { repo } from "../../repo";
 
-const fetchAllPullRequests = async () => {
-    
-    let after;
-    let nodes: any[] = [];
+const fetchAllPullRequests = async (startDate: string, endDate: string) => {
+  let after;
+  let nodes: any[] = [];
 
-     do {
-            const response: any = await fetch(repo.hostname, {
-                method: 'POST',
-                headers: {
-                    Authorization: `bearer ${personalAccessToken}`
-                },
-                body: JSON.stringify({
-                    query: build(after),
-                })
-            })
+  do {
+    const response: any = await fetch(repo.hostname, {
+      method: "POST",
+      headers: {
+        Authorization: `bearer ${personalAccessToken}`,
+      },
+      body: JSON.stringify({
+        query: build(startDate, endDate, after),
+      }),
+    });
 
-        const payload = await response.json();
+    const payload = await response.json();
 
-        if (payload?.data?.search?.nodes.length === 0) {
-            return nodes;
-        }
+    if (payload?.data?.search?.nodes.length === 0) {
+      return nodes;
+    }
 
-        nodes = nodes.concat(payload?.data?.search?.nodes);
-        
-        after = payload?.data?.search?.pageInfo?.endCursor;
+    nodes = nodes.concat(payload?.data?.search?.nodes);
 
-    } while(!!after);
+    after = payload?.data?.search?.pageInfo?.endCursor;
+  } while (!!after);
 
-    return nodes;
-}
+  return nodes;
+};
 
-export {
-    fetchAllPullRequests,
-}
+export { fetchAllPullRequests };

@@ -1,8 +1,7 @@
 export const numberOfLinesDeleted = (data: any) => {
+  const result = data.map((el: any) => {
+    return el.deletions;
+  });
 
-    const result = data.map((el: any) => {
-        return el.deletions;
-    });
-
-    return result;
-}
+  return result;
+};

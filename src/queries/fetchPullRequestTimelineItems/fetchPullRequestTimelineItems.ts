@@ -1,37 +1,40 @@
-import personalAccessToken from "../../personalAccessToken"
-import {build} from './fetchPullRequestTimelineItems.query'
-import {repo} from '../../repo';
+import personalAccessToken from "../../personalAccessToken";
+import { build } from "./fetchPullRequestTimelineItems.query";
+import { repo } from "../../repo";
 
 const fetchPullRequestTimelineItems = async (prID: string) => {
-    
-    let after;
-    let nodes: any[] = [];
+  let after;
+  let nodes: any[] = [];
 
-     do {
-            const response: any = await fetch(repo.hostname, {
-                method: 'POST',
-                headers: {
-                    Authorization: `bearer ${personalAccessToken}`
-                },
-                body: JSON.stringify({
-                    query: build(after, prID),
-                })
-            })
+  do {
+    const response: any = await fetch(repo.hostname, {
+      method: "POST",
+      headers: {
+        Authorization: `bearer ${personalAccessToken}`,
+      },
+      body: JSON.stringify({
+        query: build(after, prID),
+      }),
+    });
 
-        const payload = await response.json();
+    const payload = await response.json();
 
-        if (payload?.data?.repository?.pullRequest?.timelineItems?.nodes.length === 0) {
-            return nodes;
-        }
+    if (
+      payload?.data?.repository?.pullRequest?.timelineItems?.nodes.length === 0
+    ) {
+      return nodes;
+    }
 
-        nodes = nodes.concat(payload?.data?.repository?.pullRequest?.timelineItems?.nodes);
-        
-        after = payload?.data?.repository?.pullRequest?.timelineItems?.pageInfo?.endCursor;
-    } while(!!after);
+    nodes = nodes.concat(
+      payload?.data?.repository?.pullRequest?.timelineItems?.nodes
+    );
 
-    return nodes;
-}
+    after =
+      payload?.data?.repository?.pullRequest?.timelineItems?.pageInfo
+        ?.endCursor;
+  } while (!!after);
 
-export {
-    fetchPullRequestTimelineItems,
-}
+  return nodes;
+};
+
+export { fetchPullRequestTimelineItems };
