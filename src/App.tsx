@@ -98,7 +98,7 @@ function App() {
     <div className="App">
       <JSONPretty id="json-pretty" className="rawJson" data={data}></JSONPretty>
       <div className="prettyData">
-        <DatePickerForm />
+        <DatePickerForm initialStartDate={dateRange.start} initialEndDate={dateRange.end} />
         <h1>Month At A Glance</h1>
         <div>
           <h2>{number_of_prs_merged}</h2>
